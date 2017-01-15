@@ -34,12 +34,12 @@ START_TEST(DecimalNoToRomanNo)
 {
 #line 26
 
-	int decimal = 1;	
+	int decimal = 10;	
 	char *c1;
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"I");
-	decimal = 2;
+	ck_assert_str_eq(c1,"X");
+	/*decimal = 2;
 	c1 = DecimalToRoman(decimal);
 	ck_assert_str_eq(c1,"II");
 	decimal = 3;
@@ -50,7 +50,7 @@ START_TEST(DecimalNoToRomanNo)
 	ck_assert_str_eq(c1,"IV");
 	decimal = 8;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"VIII");
+	ck_assert_str_eq(c1,"VIII");*/
 
 
 

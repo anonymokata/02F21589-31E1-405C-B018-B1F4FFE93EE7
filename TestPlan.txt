@@ -84,3 +84,12 @@ No  ||I/P  ||  O/P
 Will move from one case to another and functionality for next case
 =======================================================================
 Test-11
+We will start with Double digit number conversion.
+If Input to Conversion function is 10 Output should be 'X'
+Test Cases:
+No  ||I/P  ||  O/P 
+ 1  || 12   ||  'XII'   
+ 2  || 44   ||  'XLIV'
+ 3  || 99   ||  'XCIX'
+
+Will move from one case to another and functionality for next case
