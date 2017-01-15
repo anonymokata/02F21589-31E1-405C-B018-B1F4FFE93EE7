@@ -8,12 +8,17 @@
 #line 1 "test.check"
 #include "Functions.h"
 #include <string.h>
-START_TEST(correctRomanNumber)
-{
-#line 4
+/*#test correctRomanNumber
 	
 	char RomanNo[] = "MVXLI";
-	ck_assert_int_eq(IpCheck(RomanNo),1);
+	ck_assert_int_eq(IpCheck(RomanNo),1);*/
+START_TEST(RomanNoToDecimal)
+{
+#line 8
+	
+	char RomanNo[5];
+	RomanNo[0] = 'I';
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
 }
 END_TEST
 
@@ -25,7 +30,7 @@ int main(void)
     int nf;
 
     suite_add_tcase(s1, tc1_1);
-    tcase_add_test(tc1_1, correctRomanNumber);
+    tcase_add_test(tc1_1, RomanNoToDecimal);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);

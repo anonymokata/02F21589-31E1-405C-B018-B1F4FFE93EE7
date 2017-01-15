@@ -1,6 +1,11 @@
 #include "Functions.h"
 #include <string.h>
-#test correctRomanNumber
+/*#test correctRomanNumber
 	
 	char RomanNo[] = "MVXLI";
-	ck_assert_int_eq(IpCheck(RomanNo),1);
+	ck_assert_int_eq(IpCheck(RomanNo),1);*/
+#test RomanNoToDecimal
+	
+	char RomanNo[5];
+	RomanNo[0] = 'I';
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
