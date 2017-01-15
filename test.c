@@ -16,9 +16,8 @@ START_TEST(RomanNoToDecimal)
 {
 #line 8
 	
-	char RomanNo[5];
-	RomanNo[0] = 'I';
-	ck_assert_int_eq(RomanToDecimal(RomanNo),1);
+	char RomanNo[] = "MDCLXVI";
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1666);
 }
 END_TEST
 
