@@ -45,12 +45,12 @@ Another number tested will be 'MCDXLIV' so output should be
 another example would be 'VL' = 45, 'XC' = 90, 'CM' = 900 etc..
 =======================================================================
 Test-6
-Now we will go ahead to test Bigger number  
+Now we will go ahead to test Bigger number 
 i.e if Input is 'MXLVI'Output is 1046 test is passed
 
 what we do here??
 Ans:
-here 'MXLVI' = M(1000) + XL(L-X=50-10=40) + V(5) + I(1) = 1046
+here 'MLXLVI' = M(1000) + L(50) + XL(L-X=50-10=40) + V(5) + I(1) = 1096
 =======================================================================
 Test-7
 Here we did all this functionality test for one input, but our goal is addition or subtraction of two numbers will add code for second number 
