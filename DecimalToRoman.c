@@ -10,7 +10,49 @@ char *DecimalToRoman(int decimal)
 	one = decimal - ten;
 	switch(ten)
 	{
-		
+		case 90:
+			RomanNo[i] = 'X';
+			RomanNo[i+1] = 'C';
+			i += 2;
+			break;
+		case 80:
+			RomanNo[i] = 'L';
+			RomanNo[i+1] = 'X';
+			RomanNo[i+2] = 'X';
+			RomanNo[i+3] = 'X';
+			i += 4;
+			break;
+		case 70:
+			RomanNo[i] = 'L';
+			RomanNo[i+1] = 'X';
+			RomanNo[i+2] = 'X';
+			i += 3;
+			break;
+		case 60:
+			RomanNo[i] = 'L';
+			RomanNo[i+1] = 'X';
+			i += 2;
+			break;
+		case 50:
+			RomanNo[i] = 'L';
+			i++;
+			break;	
+		case 40:
+			RomanNo[i] = 'X';
+			RomanNo[i+1] = 'L';
+			i += 2;
+			break;
+		case 30:
+			RomanNo[i] = 'X';
+			RomanNo[i+1] = 'X';
+			RomanNo[i+2] = 'X';
+			i += 3;
+			break;
+		case 20:
+			RomanNo[i] = 'X';
+			RomanNo[i+1] = 'X';
+			i += 2;
+			break;
 		case 10:
 			RomanNo[i] = 'X';
 			i++;

@@ -39,18 +39,15 @@ START_TEST(DecimalNoToRomanNo)
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(decimal);
 	ck_assert_str_eq(c1,"X");
-	/*decimal = 2;
+	decimal = 12;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"II");
-	decimal = 3;
+	ck_assert_str_eq(c1,"XII");
+	decimal = 44;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"III");
-	decimal = 4;
+	ck_assert_str_eq(c1,"XLIV");
+	decimal = 99;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"IV");
-	decimal = 8;
-	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"VIII");*/
+	ck_assert_str_eq(c1,"XCIX");
 
 
 
