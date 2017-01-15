@@ -3,4 +3,5 @@
 
 int IpCheck(char RomanNo[]);
 int RomanToDecimal(char RomanNo[]);
+int AddOrSub(int RomanToDecimalNo1,int RomanToDecimalNo2);
 #endif

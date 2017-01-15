@@ -12,14 +12,22 @@
 	
 	char RomanNo[] = "MVXLI";
 	ck_assert_int_eq(IpCheck(RomanNo),1);*/
-START_TEST(RomanNoToDecimal)
-{
-#line 8
+/*#test RomanNoToDecimal
 	
 	char RomanNo[] = "MDCCXXIV";
 	char RomanNo1[] = "MLXLVI";
 	ck_assert_int_eq(RomanToDecimal(RomanNo),1724);
-	ck_assert_int_eq(RomanToDecimal(RomanNo1),1096);
+	ck_assert_int_eq(RomanToDecimal(RomanNo1),1096);*/
+START_TEST(AdditionOrSubtraction)
+{
+#line 14
+
+	char RomanNo[] = "MDCCXXIV";
+	char RomanNo1[] = "MLXLVI";
+	int RomanToDecimal1, RomanToDecimal2;
+	RomanToDecimal1 = RomanToDecimal(RomanNo);
+	RomanToDecimal2 = RomanToDecimal(RomanNo1);
+	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2),2820);
 }
 END_TEST
 
@@ -31,7 +39,7 @@ int main(void)
     int nf;
 
     suite_add_tcase(s1, tc1_1);
-    tcase_add_test(tc1_1, RomanNoToDecimal);
+    tcase_add_test(tc1_1, AdditionOrSubtraction);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
