@@ -8,19 +8,20 @@
 #line 1 "test.check"
 #include "Functions.h"
 #include <string.h>
+#include<stdlib.h>
 /*#test correctRomanNumber
 	
 	char RomanNo[] = "MVXLI";
 	ck_assert_int_eq(IpCheck(RomanNo),1);*/
+
 /*#test RomanNoToDecimal
 	
 	char RomanNo[] = "MDCCXXIV";
 	char RomanNo1[] = "MLXLVI";
 	ck_assert_int_eq(RomanToDecimal(RomanNo),1724);
 	ck_assert_int_eq(RomanToDecimal(RomanNo1),1096);*/
-START_TEST(AdditionOrSubtraction)
-{
-#line 14
+
+/*#test AdditionOrSubtraction
 
 	char RomanNo[] = "MDCCXXIV";
 	char RomanNo1[] = "MLXLVI";
@@ -28,7 +29,16 @@ START_TEST(AdditionOrSubtraction)
 	int operation = 2;//If its 1 then Addition & 2 then Subtraction
 	RomanToDecimal1 = RomanToDecimal(RomanNo);
 	RomanToDecimal2 = RomanToDecimal(RomanNo1);
-	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2,operation),628);
+	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2,operation),628);*/
+START_TEST(DecimalNoToRomanNo)
+{
+#line 26
+
+	int decimal = 1;	
+	char *c1;
+	c1 = (char *)malloc(30);
+	c1 = DecimalToRoman(decimal);
+	ck_assert_str_eq(c1,"I");
 }
 END_TEST
 
@@ -40,7 +50,7 @@ int main(void)
     int nf;
 
     suite_add_tcase(s1, tc1_1);
-    tcase_add_test(tc1_1, AdditionOrSubtraction);
+    tcase_add_test(tc1_1, DecimalNoToRomanNo);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
