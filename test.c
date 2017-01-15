@@ -16,8 +16,10 @@ START_TEST(RomanNoToDecimal)
 {
 #line 8
 	
-	char RomanNo[] = "MDCLXVI";
-	ck_assert_int_eq(RomanToDecimal(RomanNo),1666);
+	char RomanNo[] = "IV";
+	char RomanNo1[] = "MCDXLIV";
+	ck_assert_int_eq(RomanToDecimal(RomanNo),4);
+	ck_assert_int_eq(RomanToDecimal(RomanNo1),1444);
 }
 END_TEST
 

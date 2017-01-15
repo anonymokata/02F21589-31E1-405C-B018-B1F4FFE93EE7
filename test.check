@@ -6,5 +6,7 @@
 	ck_assert_int_eq(IpCheck(RomanNo),1);*/
 #test RomanNoToDecimal
 	
-	char RomanNo[] = "MDCLXVI";
-	ck_assert_int_eq(RomanToDecimal(RomanNo),1666);
+	char RomanNo[] = "IV";
+	char RomanNo1[] = "MCDXLIV";
+	ck_assert_int_eq(RomanToDecimal(RomanNo),4);
+	ck_assert_int_eq(RomanToDecimal(RomanNo1),1444);
