@@ -1,0 +1,7 @@
+#include "Functions.h"
+
+#test correctRomanNumber
+	
+	char RomanNo[20];
+	RomanNo[0] = 'I';
+	ck_assert_int_eq(IpCheck(RomanNo),1);

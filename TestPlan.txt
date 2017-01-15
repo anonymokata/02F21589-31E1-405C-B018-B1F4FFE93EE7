@@ -1,0 +1,82 @@
+Roman Number Calculator (Addition or Subtraction)
+
+Project: By Vivek Shah
+=======================================================================
+Compiler: GCC
+Framework: Check (FOR TDD)
+=======================================================================
+Roman Numbers:
+I = 1 || V = 5 || X = 10 || L = 50 || C = 100 || D = 500 || M = 1000
+=======================================================================
+In this program as we are dealing Roman number i/p would be string, and that string would be capital letters only
+=======================================================================
+Test-1
+Check the Input Roman Number provided by User Should only Contain Roman Numbers i.e I/V/X/L/C/D/M.
+
+Will start with checking one single digit number. i.e if Input is 'I' Function should return 1 otherwise 0.
+i.e if Input is 'I' test PASS, if 'i' test fail.
+
+after test for 'I;' passed add functionality for all Roman numbers.
+=======================================================================
+Test-2
+Will move from checking one single digit number to number with multiple characters.
+
+i.e if Input is 'MVXLI' test PASS, if input is 'MvXLI' or any letter of input string is lowwer case test is fail.
+=======================================================================
+Test-3
+Convert Roman number to Decimal (Its known as Hindi-Arebic Nuber system i.e 1,2,3 etc)
+We will start with simple conversion,
+i.e if input 'I' conversion should be 1
+i.e If input 'I' ->> Conversion function output 1 ->> Test pass
+
+after test for 'I;' passed add functionality for all Roman numbers.
+=======================================================================
+Test-4
+In Roman number system if lesser numeral is placed before higher value number then its conversion to decimal would be >> Big Number - small number <<.
+
+i.e 'IV' = 4 (V - I) not 6 (I + V)
+So if Input is 'IV' and output is 4 test pass
+
+another example would be 'VL' = 45, 'XC' = 90, 'CM' = 900 etc..
+=======================================================================
+Test-5
+Now we will go ahead to test Bigger number  
+i.e if Input is 'MXLVI'Output is 1046 test is passed
+
+what we do here??
+Ans:
+here 'MXLVI' = M(1000) + XL(L-X=50-10=40) + V(5) + I(1) = 1046
+=======================================================================
+Test-6
+Here we did all this functionality test for one input, but our goal is addition or subtraction of two numbers will add code for second number 
+=======================================================================
+Test-7
+Perform Addition operation
+If Input 1 = 'MXLVI' = 1046
+&  Input 2 = 'MCDLV' = 1455
+
+output should be 2501 if its 2501 test pass.
+=======================================================================
+Test-8
+Perform Subtraction operation
+If Input 1 = 'MXLVI' = 1046
+&  Input 2 = 'MCDLV' = 1455
+
+output should be 49 if its 49 test pass.
+=======================================================================
+And Now the Main Part comes as we are creating Roman Number calculator we dont want final output as Decimal we need it in Roman Number. So now we will test for conversion from Decimal to Roman Numbers.
+======================================================================= 
+Test-9
+We will start with simple single digit number conversion.
+If Input to Conversion function is 2 Output should be 'II'
+Test Cases:
+No  ||I/P  ||  O/P 
+ 1  || 2   ||  'II'   
+ 2  || 3   ||  'III'
+ 3  || 4   ||  'IV'
+ 4  || 8   ||  'VIII
+
+Will move from one case to another and functionality for next case
+=======================================================================
+Test-10
+
