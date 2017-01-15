@@ -7,13 +7,12 @@
 
 #line 1 "test.check"
 #include "Functions.h"
-
+#include <string.h>
 START_TEST(correctRomanNumber)
 {
 #line 4
 	
-	char RomanNo[20];
-	RomanNo[0] = 'I';
+	char RomanNo[] = "MVXLI";
 	ck_assert_int_eq(IpCheck(RomanNo),1);
 }
 END_TEST

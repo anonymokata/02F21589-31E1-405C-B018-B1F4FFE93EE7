@@ -1,7 +1,6 @@
 #include "Functions.h"
-
+#include <string.h>
 #test correctRomanNumber
 	
-	char RomanNo[20];
-	RomanNo[0] = 'I';
+	char RomanNo[] = "MVXLI";
 	ck_assert_int_eq(IpCheck(RomanNo),1);
