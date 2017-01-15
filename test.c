@@ -39,6 +39,37 @@ START_TEST(DecimalNoToRomanNo)
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(decimal);
 	ck_assert_str_eq(c1,"I");
+	decimal = 2;
+	c1 = DecimalToRoman(decimal);
+	ck_assert_str_eq(c1,"II");
+	decimal = 3;
+	c1 = DecimalToRoman(decimal);
+	ck_assert_str_eq(c1,"III");
+	decimal = 4;
+	c1 = DecimalToRoman(decimal);
+	ck_assert_str_eq(c1,"IV");
+	decimal = 8;
+	c1 = DecimalToRoman(decimal);
+	ck_assert_str_eq(c1,"VIII");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 END_TEST
 
