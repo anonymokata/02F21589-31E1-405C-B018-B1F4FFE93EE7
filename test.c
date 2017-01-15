@@ -25,9 +25,10 @@ START_TEST(AdditionOrSubtraction)
 	char RomanNo[] = "MDCCXXIV";
 	char RomanNo1[] = "MLXLVI";
 	int RomanToDecimal1, RomanToDecimal2;
+	int operation = 2;//If its 1 then Addition & 2 then Subtraction
 	RomanToDecimal1 = RomanToDecimal(RomanNo);
 	RomanToDecimal2 = RomanToDecimal(RomanNo1);
-	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2),2820);
+	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2,operation),628);
 }
 END_TEST
 
