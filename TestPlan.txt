@@ -93,3 +93,14 @@ No  ||I/P  ||  O/P
  3  || 99   ||  'XCIX'
 
 Will move from one case to another and functionality for next case
+========================================================================
+Test-12
+We will start with Three digit number conversion.
+If Input to Conversion function is 100 Output should be 'C'
+Test Cases:
+No  ||I/P  ||  O/P 
+ 1  || 112   ||  'CXII'   
+ 2  || 444   ||  'CDXLIV'
+ 3  || 999   ||  'CMXCIX'
+
+Will move from one case to another and functionality for next case
