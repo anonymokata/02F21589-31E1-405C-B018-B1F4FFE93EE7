@@ -81,7 +81,7 @@ No  ||I/P  ||  O/P
  3  || 4   ||  'IV'
  4  || 8   ||  'VIII
 
-Will move from one case to another and functionality for next case
+Will move from one case to another and add functionality for next case
 =======================================================================
 Test-11
 We will start with Double digit number conversion.
@@ -92,7 +92,7 @@ No  ||I/P  ||  O/P
  2  || 44   ||  'XLIV'
  3  || 99   ||  'XCIX'
 
-Will move from one case to another and functionality for next case
+Will move from one case to another and add functionality for next case
 ========================================================================
 Test-12
 We will start with Three digit number conversion.
@@ -103,4 +103,15 @@ No  ||I/P  ||  O/P
  2  || 444   ||  'CDXLIV'
  3  || 999   ||  'CMXCIX'
 
-Will move from one case to another and functionality for next case
+Will move from one case to another and add functionality for next case
+========================================================================
+Test-13
+We will start with Three digit number conversion.
+If Input to Conversion function is 1000 Output should be 'M
+Test Cases:
+No  ||I/P  ||  O/P 
+ 1  || 1112   ||  'MCXII'   
+ 2  || 4444   ||  'MMMMCDXLIV'
+ 3  || 9999   ||  'MMMMMMMMMCMXCIX'
+
+Will move from one case to another and add functionality for next case

@@ -3,12 +3,17 @@
 char *DecimalToRoman(int decimal)
 {
 	int i=0,n=20;
-	int ten,one,hundred;
+	int ten,one,hundred,thousand;
 	char *RomanNo;
 	RomanNo = malloc(n);
-	hundred = decimal - (decimal%100);
-	ten = (decimal - hundred) - ((decimal - hundred)%10);
-	one = decimal - hundred - ten;
+	thousand = decimal - (decimal%1000);
+	hundred = (decimal - thousand) - ((decimal - thousand)%100);
+	ten = (decimal - thousand - hundred) - ((decimal - thousand - hundred)%10);
+	one = decimal - thousand - hundred - ten;
+	for(i=0;i<(thousand/1000);i++)
+	{
+		RomanNo[i] = 'M';
+	}
 	switch(hundred)
 	{
 		case 900:

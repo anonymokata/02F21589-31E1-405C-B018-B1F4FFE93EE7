@@ -34,20 +34,20 @@ START_TEST(DecimalNoToRomanNo)
 {
 #line 26
 
-	int decimal = 100;	
+	int decimal = 1000;	
 	char *c1;
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"C");
-	decimal = 112;
+	ck_assert_str_eq(c1,"M");
+	decimal = 1112;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"CXII");
-	decimal = 444;
+	ck_assert_str_eq(c1,"MCXII");
+	decimal = 4444;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"CDXLIV");
-	decimal = 999;
+	ck_assert_str_eq(c1,"MMMMCDXLIV");
+	decimal = 9999;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"CMXCIX");
+	ck_assert_str_eq(c1,"MMMMMMMMMCMXCIX");
 
 
 
