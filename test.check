@@ -29,15 +29,15 @@
 	c1 = (char *)malloc(30);
 	c1 = DecimalToRoman(decimal);
 	ck_assert_str_eq(c1,"C");
-	/*decimal = 12;
+	decimal = 112;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"XII");
-	decimal = 44;
+	ck_assert_str_eq(c1,"CXII");
+	decimal = 444;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"XLIV");
-	decimal = 99;
+	ck_assert_str_eq(c1,"CDXLIV");
+	decimal = 999;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"XCIX");*/
+	ck_assert_str_eq(c1,"CMXCIX");
 
 
 
