@@ -7,6 +7,8 @@ int main()
 	int IpNoStatus = 0;
 	char IpRomanNo1[50], IpRomanNo2[50];
 	int RomanToDecimalNo1=0,RomanToDecimalNo2=0,Operation=0,Result=0;
+	char *c1;
+	c1 = (char *)malloc(30);
 
 	//Scan the First Roman Number
 	printf("Enter First Roman No:");
@@ -54,10 +56,13 @@ int main()
 	//Perform Add or Subtraction as per selection
 	Result = AddOrSub(RomanToDecimalNo1,RomanToDecimalNo2,Operation);
 
+	//Convert Result of Addition or Subtraction to Roman Number System
+	c1 = DecimalToRoman(Result);
+
 	//Display The Final Result
 	if(Operation == 1)
-		printf("\nThe Addition is:%d\nThank You For Using My Roman Calc\n",Result);
+		printf("\nThe Addition is:%dand Its Roman Equivalent is: %s\nThank You For Using My Roman Calc\n",Result,c1);
 	else
-		printf("\nThe Subtraction is:%d\nThank You For Using My Roman Calc\n",Result);
+		printf("\nThe Subtraction is:%dand Its Roman Equivalent is: %s\nThank You For Using My Roman Calc\n",Result,c1);
 	return 0;
 }

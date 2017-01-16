@@ -30,9 +30,7 @@
 	RomanToDecimal1 = RomanToDecimal(RomanNo);
 	RomanToDecimal2 = RomanToDecimal(RomanNo1);
 	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2,operation),628);*/
-START_TEST(DecimalNoToRomanNo)
-{
-#line 26
+/*#test DecimalNoToRomanNo
 
 	int decimal = 1000;	
 	char *c1;
@@ -47,9 +45,30 @@ START_TEST(DecimalNoToRomanNo)
 	ck_assert_str_eq(c1,"MMMMCDXLIV");
 	decimal = 9999;
 	c1 = DecimalToRoman(decimal);
-	ck_assert_str_eq(c1,"MMMMMMMMMCMXCIX");
+	ck_assert_str_eq(c1,"MMMMMMMMMCMXCIX");*/
+START_TEST(finaltest)
+{
+#line 42
+	char RomanNo[] = "MDCCXXIV";
+	char RomanNo1[] = "MLXLVI";
+	int RomanToDecimal1, RomanToDecimal2, decimal;
+	int operation = 2;//If its 1 then Addition & 2 then Subtraction
+	char *c1;
+	c1 = (char *)malloc(30);
 
+	ck_assert_int_eq(IpCheck(RomanNo),1);
+	ck_assert_int_eq(IpCheck(RomanNo1),1);
 
+	ck_assert_int_eq(RomanToDecimal(RomanNo),1724);
+	ck_assert_int_eq(RomanToDecimal(RomanNo1),1096);
+
+	RomanToDecimal1 = RomanToDecimal(RomanNo);
+	RomanToDecimal2 = RomanToDecimal(RomanNo1);
+	ck_assert_int_eq(AddOrSub(RomanToDecimal1,RomanToDecimal2,operation),628);
+
+	decimal = AddOrSub(RomanToDecimal1,RomanToDecimal2,operation);
+	c1 = DecimalToRoman(decimal);
+	ck_assert_str_eq(c1,"DCXXVIII");
 
 
 
@@ -78,7 +97,7 @@ int main(void)
     int nf;
 
     suite_add_tcase(s1, tc1_1);
-    tcase_add_test(tc1_1, DecimalNoToRomanNo);
+    tcase_add_test(tc1_1, finaltest);
 
     srunner_run_all(sr, CK_ENV);
     nf = srunner_ntests_failed(sr);
